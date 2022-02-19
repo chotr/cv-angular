@@ -1,0 +1,37 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  .navbar-brand {
+    // font-family: "Dancing Script", cursive;
+    font-family: "Parisienne", cursive;
+    // font-weight: 600;
+    font-size: 27px;
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 2px;
+    li.nav-item {
+      margin: 0 20px;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background-image: linear-gradient(to right, #ffffff, #ffffff);
+        width: 0;
+        transition: all 0.3s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        
+      }
+      &:hover:after {
+        width: 100%;
+
+      }
+    }
+  }
+}
