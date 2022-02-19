@@ -8,6 +8,14 @@
     // font-weight: 600;
     font-size: 27px;
   }
+  .navbar-toggler {
+    border: none!important;
+    &:focus{
+        border: none;
+        box-shadow: none;
+        outline: none;
+    }
+  }
   .navbar-collapse {
     justify-content: flex-end;
     font-weight: 200;
@@ -26,11 +34,12 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        
+      }
+      a{
+        color: #fff;
       }
       &:hover:after {
         width: 100%;
-
       }
     }
   }
