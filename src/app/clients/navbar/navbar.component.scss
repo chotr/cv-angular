@@ -5,16 +5,18 @@
   .navbar-brand {
     // font-family: "Dancing Script", cursive;
     font-family: "Parisienne", cursive;
-    // font-weight: 600;
     font-size: 27px;
   }
   .navbar-toggler {
-    border: none!important;
-    &:focus{
-        border: none;
-        box-shadow: none;
-        outline: none;
+    border: none !important;
+    &:focus {
+      border: none;
+      box-shadow: none;
+      outline: none;
     }
+  }
+  .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
   .navbar-collapse {
     justify-content: flex-end;
@@ -35,12 +37,137 @@
         bottom: 0;
         left: 0;
       }
-      a{
+      a {
         color: #fff;
       }
       &:hover:after {
         width: 100%;
       }
     }
+  }
+  .active {
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: #fff;
+      width: 100%;
+      transition: all 0.3s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      animation: active 0.3s;
+    }
+  }
+}
+.outTop {
+  animation: outTop 0.9s;
+  background: #fff;
+  border-bottom: 1px solid #00000036;
+  .active {
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: black;
+      width: 100%;
+      transition: all 0.3s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      animation: active2 0.9s;
+    }
+  }
+  li.nav-item {
+    &::after {
+      background: black !important;
+    }
+  }
+  .navbar-brand {
+    color: black;
+    animation: color 0.9s;
+  }
+  a {
+    color: black !important;
+    font-weight: 400 !important;
+    animation: color 0.9s;
+  }
+  .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+.onTop {
+  animation: onTop 0.9s;
+}
+
+@keyframes active {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes active2 {
+  from {
+    width: 0;
+    background: #fff;
+  }
+  to {
+    width: 100%;
+    background: black;
+  }
+}
+
+@keyframes color {
+  0% {
+    color: #fff;
+  }
+  50%{
+    color: #fff;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes outTop {
+  0% {
+    top: 0;
+    background: 0 0;
+    color: #fff;
+    border: none;
+  }
+  50% {
+    top: -20%;
+    background: 0 0;
+    color: #fff;
+    border: none;
+  }
+
+  100% {
+    top: 0;
+    background: #fff;
+    color: black;
+    border-bottom: 1px solid #00000036;
+  }
+}
+
+@keyframes onTop {
+  0% {
+    top: 0;
+    background: #fff;
+    color: black;
+  }
+  50% {
+    top: -20%;
+  }
+
+  100% {
+    top: 0;
+    background: 0 0;
+    color: #fff;
   }
 }

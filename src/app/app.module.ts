@@ -7,6 +7,7 @@ import { CarouselComponent } from './clients/carousel/carousel.component';
 import { AboutComponent } from './clients/about/about.component';
 import { SocialsComponent } from './clients/socials/socials.component';
 import { SkillsComponent } from './clients/skills/skills.component';
+import { BackToTopComponent } from './clients/back-to-top/back-to-top.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SkillsComponent } from './clients/skills/skills.component';
     AboutComponent,
     SocialsComponent,
     SkillsComponent,
+    BackToTopComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],

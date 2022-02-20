@@ -3,3 +3,55 @@
   outline: 0;
   box-shadow: none;
 }
+.hide {
+  display: none;
+  transition: all 0.3s;
+}
+
+.show {
+  display: block;
+  transition: all 0.3s;
+}
+
+.text {
+  animation: moveFadeUp 0.9s;
+}
+.left {
+  background: linear-gradient(to right, transparent, #818078);
+  animation: lineLeft 0.9s;
+}
+.right {
+  background: linear-gradient(to right, #818078, transparent);
+  animation: lineRight 0.9s;
+}
+
+@keyframes lineLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes lineRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes moveFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
