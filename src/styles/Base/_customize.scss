@@ -1,8 +1,11 @@
+@import "../Helper/mixin";
+@import "../Helper/variables";
 .btn.focus,
 .btn:focus {
   outline: 0;
   box-shadow: none;
 }
+
 .content {
   padding: 70px 0;
   overflow: hidden;
@@ -26,6 +29,7 @@
     }
   }
 }
+
 .hide_s {
   opacity: 0;
   transition: all 0.3s;
@@ -41,14 +45,17 @@
 .text {
   animation: moveFadeUp 1.2s;
 }
+
 .left {
   background: linear-gradient(to right, transparent, #818078);
   animation: lineLeft 1.2s;
 }
+
 .right {
   background: linear-gradient(to right, #818078, transparent);
   animation: lineRight 1.2s;
 }
+
 .image_border {
   position: relative;
   padding: 5px;
@@ -64,6 +71,7 @@
     right: 0;
   }
 }
+
 .title_text.text {
   position: relative;
   &::before {
@@ -78,9 +86,31 @@
     background-position: center;
   }
 }
-.fadeIn{
+
+.fadeIn {
   animation: fadeIn 0.8s;
 }
+
+@include responsive("extra-large") {
+  .content {
+    .title_text {
+      &::before {
+        background-size: 100px;
+      }
+    }
+  }
+}
+
+@include responsive("large") {
+  .content {
+    .title_text {
+      &::before {
+        background-size: 80px;
+      }
+    }
+  }
+}
+
 @keyframes lineLeft {
   from {
     transform: translateX(-100%);
@@ -91,6 +121,7 @@
     opacity: 1;
   }
 }
+
 @keyframes lineRight {
   from {
     transform: translateX(100%);
@@ -101,6 +132,7 @@
     opacity: 1;
   }
 }
+
 @keyframes moveFadeUp {
   from {
     opacity: 0;
@@ -111,6 +143,7 @@
     transform: translateY(0);
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -119,6 +152,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fadeOut {
   from {
     opacity: 1;

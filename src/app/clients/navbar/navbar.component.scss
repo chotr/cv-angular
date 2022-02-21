@@ -1,3 +1,5 @@
+@import "../../../styles/Helper/mixin";
+@import "../../../styles/Helper/variables";
 .navbar {
   position: fixed;
   width: 100%;
@@ -15,7 +17,7 @@
       outline: none;
     }
   }
-  .navbar-toggler-icon{
+  .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
   .navbar-collapse {
@@ -92,13 +94,39 @@
     font-weight: 400 !important;
     animation: color 0.9s;
   }
-  .navbar-toggler-icon{
+  .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 }
 
 .onTop {
   animation: onTop 0.9s;
+}
+
+@include responsive("extra-large") {
+  .navbar {
+    .navbar-brand {
+      font-size: 23px;
+    }
+    .navbar-collapse {
+      li.nav-item {
+        a {
+          font-size: 13px;
+        }
+      }
+    }
+    .navbar-toggler-icon{
+      font-size: 17px;
+    }
+  }
+}
+
+@include responsive("large") {
+  .navbar {
+    .navbar-brand {
+      font-size: 20px;
+    }
+  }
 }
 
 @keyframes active {
@@ -125,7 +153,7 @@
   0% {
     color: #fff;
   }
-  50%{
+  50% {
     color: #fff;
   }
   100% {
