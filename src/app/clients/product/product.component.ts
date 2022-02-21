@@ -11,7 +11,10 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {}
   @HostListener('window:scroll', []) onWindowScroll() {
     let content = document.getElementsByClassName(
-      'product_list'
+      'getActiveProduct'
+    )[0] as HTMLElement;
+    let content1 = document.getElementsByClassName(
+      'content_product'
     )[0] as HTMLElement;
     let screenPosition = window.innerHeight;
     if (content.getBoundingClientRect().top < screenPosition) {
@@ -26,6 +29,7 @@ export class ProductComponent implements OnInit {
       left.classList.add('left');
       right.classList.add('right');
       title.classList.add('text');
+      content1.style.opacity = '1';
     }
   }
 }

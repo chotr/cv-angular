@@ -16,16 +16,15 @@ export class AboutComponent implements OnInit, AfterContentInit {
   constructor() {}
   ngAfterContentInit(): void {}
   @HostListener('window:scroll', []) onWindowScroll() {
-    // let content = document.getElementsByClassName('title')[0] as HTMLElement;
+    let content = document.getElementsByClassName('content_about')[0] as HTMLElement;
     const introduce = document.getElementsByClassName(
       'introduce'
     )[0] as HTMLElement;
-    const info = document.getElementsByClassName('info')[0] as HTMLElement;
-    const getAcitve = document.getElementsByClassName(
+    const getActive = document.getElementsByClassName(
       'getActive'
     )[0] as HTMLElement;
     const screenPosition = window.innerHeight;
-    if (introduce.getBoundingClientRect().top < screenPosition) {
+    if (getActive.getBoundingClientRect().top < screenPosition) {
       let left = document.getElementsByClassName('line_left')[0] as HTMLElement;
       let right = document.getElementsByClassName(
         'line_right'
@@ -38,8 +37,9 @@ export class AboutComponent implements OnInit, AfterContentInit {
       right.classList.add('right');
       title.classList.add('text');
       introduce.classList.add('text');
+      content.style.opacity = '1';
     }
-    if (info.getBoundingClientRect().top < screenPosition) {
+    if (getActive.getBoundingClientRect().top < screenPosition) {
       const left = document.getElementsByClassName('img')[0] as HTMLElement;
       const left_absolute = document.getElementsByClassName(
         'img_absolute'
@@ -50,7 +50,6 @@ export class AboutComponent implements OnInit, AfterContentInit {
       left.classList.add('left');
       right.classList.add('right');
       left_absolute.classList.add('text');
-
     }
   }
   ngOnInit(): void {}

@@ -11,7 +11,10 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {}
   @HostListener('window:scroll', []) onWindowScroll() {
     let content = document.getElementsByClassName(
-      'skills_list'
+      'getActiveSkills'
+    )[0] as HTMLElement;
+    let content1 = document.getElementsByClassName(
+      'content_skills'
     )[0] as HTMLElement;
     let screenPosition = window.innerHeight;
     if (content.getBoundingClientRect().top < screenPosition) {
@@ -26,6 +29,7 @@ export class SkillsComponent implements OnInit {
       left.classList.add('left');
       right.classList.add('right');
       title.classList.add('text');
+      content1.style.opacity = '1';
 
       for (let i = 0; i < 4; i++) {
         let num = 0.8 * 1 + i * 0.2;

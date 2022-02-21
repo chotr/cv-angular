@@ -11,10 +11,10 @@ export class CertificateComponent implements OnInit {
   ngOnInit(): void {}
   @HostListener('window:scroll', []) onWindowScroll() {
     let content = document.getElementsByClassName(
-      'fe_c_text'
+      'getActiveCertificate'
     )[0] as HTMLElement;
-    let contentbe = document.getElementsByClassName(
-      'be_c_text'
+    let content1 = document.getElementsByClassName(
+      'content_certificate'
     )[0] as HTMLElement;
     let screenPosition = window.innerHeight;
     if (content.getBoundingClientRect().top < screenPosition) {
@@ -33,7 +33,7 @@ export class CertificateComponent implements OnInit {
       title.classList.add('text');
       fe.style.animation = 'lineRight 1.4s';
       be.style.animation = 'lineLeft 1.4s';
+      content1.style.opacity = '1';
     }
-    
   }
 }

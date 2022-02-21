@@ -1,5 +1,6 @@
 .content {
   overflow: hidden;
+  opacity: 0;
   .title {
     display: flex;
     flex-direction: row;
@@ -22,7 +23,6 @@
   .certificate_list {
     .img {
       width: 60%;
-      
     }
     .text {
       display: flex;
@@ -30,10 +30,10 @@
       align-content: center;
       justify-content: center;
     }
-    .fe_c{
+    .fe_c {
       background: 0 0;
     }
-    .be_c{
+    .be_c {
       background: 0 0;
     }
   }
