@@ -50,16 +50,17 @@ export class AboutComponent implements OnInit, AfterContentInit {
       left.classList.add('left');
       right.classList.add('right');
       left_absolute.classList.add('text');
-    }
-    if (getAcitve.getBoundingClientRect().top < screenPosition) {
-      const navLink = document.querySelectorAll('nav-link');
-      const active = document.getElementById('aboutMenu') as HTMLElement;
-      // reset nav link
-      for (let i = 0; i < navLink.length; i) {
-        navLink[i].className = 'nav-link';
+
+      for (let i = 0; i < 4; i++) {
+        (
+          document.getElementsByClassName('nav-link')[i] as HTMLElement
+        ).classList.remove('active');
       }
-      active.classList.add('active');
+      (
+        document.getElementsByClassName('nav-link')[0] as HTMLElement
+      ).classList.add('active');
     }
+    
   }
   ngOnInit(): void {}
 }

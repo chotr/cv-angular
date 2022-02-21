@@ -1,0 +1,40 @@
+.content {
+  overflow: hidden;
+  .title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    .line {
+      width: 20%;
+      height: 1px;
+    }
+
+    h2 {
+      margin: 0 10px;
+      font-weight: 300;
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+  }
+  .certificate_list {
+    .img {
+      width: 60%;
+      
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+    .fe_c{
+      background: 0 0;
+    }
+    .be_c{
+      background: 0 0;
+    }
+  }
+}

@@ -3,6 +3,28 @@
   outline: 0;
   box-shadow: none;
 }
+.content {
+  padding: 70px 0;
+  .title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    .line {
+      width: 20%;
+      height: 1px;
+    }
+
+    h2 {
+      margin: 0 10px;
+      font-weight: 300;
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+  }
+}
 .hide {
   display: none;
   transition: all 0.3s;
@@ -14,15 +36,44 @@
 }
 
 .text {
-  animation: moveFadeUp 0.9s;
+  animation: moveFadeUp 1.2s;
 }
 .left {
   background: linear-gradient(to right, transparent, #818078);
-  animation: lineLeft 0.9s;
+  animation: lineLeft 1.2s;
 }
 .right {
   background: linear-gradient(to right, #818078, transparent);
-  animation: lineRight 0.9s;
+  animation: lineRight 1.2s;
+}
+.image_border {
+  position: relative;
+  padding: 5px;
+  &::before {
+    position: absolute;
+    content: "";
+    border: 4px solid #d67456;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+.title_text.text {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -35%;
+    width: 100%;
+    height: 15px;
+    background-image: url("../../assets/images/PikPng.com_underline-png_512746.png");
+    background-size: 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 @keyframes lineLeft {

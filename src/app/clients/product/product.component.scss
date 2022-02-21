@@ -1,0 +1,39 @@
+.content {
+  background: #ecf1f4;
+  .product_list {
+    position: relative;
+    padding: 40px 0;
+    .button {
+      width: 6%;
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .previous {
+      left: 3%;
+    }
+    .next {
+      right: 3%;
+    }
+    .product_content {
+      h3 {
+        font-size: 25px;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+      .info_pr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .btn {
+          border: 1px solid;
+          border-radius: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

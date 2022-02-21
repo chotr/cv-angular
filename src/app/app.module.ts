@@ -8,6 +8,9 @@ import { AboutComponent } from './clients/about/about.component';
 import { SocialsComponent } from './clients/socials/socials.component';
 import { SkillsComponent } from './clients/skills/skills.component';
 import { BackToTopComponent } from './clients/back-to-top/back-to-top.component';
+import { CertificateComponent } from './clients/certificate/certificate.component';
+import { ProductComponent } from './clients/product/product.component';
+import { FooterComponent } from './clients/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { BackToTopComponent } from './clients/back-to-top/back-to-top.component'
     SocialsComponent,
     SkillsComponent,
     BackToTopComponent,
+    CertificateComponent,
+    ProductComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],
