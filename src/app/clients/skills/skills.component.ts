@@ -16,8 +16,14 @@ export class SkillsComponent implements OnInit {
     let content1 = document.getElementsByClassName(
       'content_skills'
     )[0] as HTMLElement;
+    let content2 = document.getElementsByClassName(
+      'skills_list'
+    )[0] as HTMLElement;
     let screenPosition = window.innerHeight;
-    if (content.getBoundingClientRect().top < screenPosition) {
+    if (
+      content.getBoundingClientRect().top < screenPosition &&
+      content.getBoundingClientRect().top >= 0
+    ) {
       let left = document.getElementsByClassName('line_left')[1] as HTMLElement;
       let right = document.getElementsByClassName(
         'line_right'
@@ -29,20 +35,51 @@ export class SkillsComponent implements OnInit {
       left.classList.add('left');
       right.classList.add('right');
       title.classList.add('text');
+      content2.classList.add('vertical');
       content1.style.opacity = '1';
+      content1.style.animation = 'none';
 
       for (let i = 0; i < 4; i++) {
         let num = 0.8 * 1 + i * 0.2;
+        let num1 = 1 * 1 + i * 0.2;
         (
           document.getElementsByClassName('text_left')[i] as HTMLElement
         ).style.animation = 'lineLeft ' + num + 's';
-      }
-
-      for (let i = 0; i < 4; i++) {
-        let num = 0.8 * 1 + i * 0.2;
         (
           document.getElementsByClassName('text_right')[i] as HTMLElement
         ).style.animation = 'lineRight ' + num + 's';
+
+        (
+          document.getElementsByClassName('dot')[i] as HTMLElement
+        ).style.animation = 'upToDown' + i + ' ' + num1 + 's';
+      }
+    } else {
+      let left = document.getElementsByClassName('line_left')[1] as HTMLElement;
+      let right = document.getElementsByClassName(
+        'line_right'
+      )[1] as HTMLElement;
+      let title = document.getElementsByClassName(
+        'title_text'
+      )[1] as HTMLElement;
+
+      left.classList.remove('left');
+      right.classList.remove('right');
+      title.classList.remove('text');
+      content2.classList.remove('vertical');
+      content1.style.opacity = '0';
+      content1.style.animation = 'fadeOut 1s';
+
+      for (let i = 0; i < 4; i++) {
+        (
+          document.getElementsByClassName('text_left')[i] as HTMLElement
+        ).style.animation = 'none';
+        (
+          document.getElementsByClassName('text_right')[i] as HTMLElement
+        ).style.animation = 'none';
+
+        (
+          document.getElementsByClassName('dot')[i] as HTMLElement
+        ).style.animation = 'none';
       }
     }
   }

@@ -17,8 +17,7 @@ export class CertificateComponent implements OnInit {
       'content_certificate'
     )[0] as HTMLElement;
     let screenPosition = window.innerHeight;
-    if (content.getBoundingClientRect().top < screenPosition) {
-      let left = document.getElementsByClassName('line_left')[2] as HTMLElement;
+    let left = document.getElementsByClassName('line_left')[2] as HTMLElement;
       let fe = document.getElementsByClassName('fe_c')[0] as HTMLElement;
       let be = document.getElementsByClassName('be_c')[0] as HTMLElement;
       let right = document.getElementsByClassName(
@@ -27,13 +26,22 @@ export class CertificateComponent implements OnInit {
       let title = document.getElementsByClassName(
         'title_text'
       )[2] as HTMLElement;
-
+    if (content.getBoundingClientRect().top < screenPosition && content.getBoundingClientRect().top >=0) {
       left.classList.add('left');
       right.classList.add('right');
       title.classList.add('text');
       fe.style.animation = 'lineRight 1.4s';
       be.style.animation = 'lineLeft 1.4s';
       content1.style.opacity = '1';
+      content1.style.animation = 'none';
+    }else{
+      left.classList.remove('left');
+      right.classList.remove('right');
+      title.classList.remove('text');
+      fe.style.animation = 'none';
+      be.style.animation = 'none';
+      content1.style.opacity = '0';
+      content1.style.animation = 'fadeOut 1s';
     }
   }
 }
