@@ -15,15 +15,15 @@ export class SocialsComponent implements OnInit {
       'skills'
     )[0] as HTMLElement;
     let screenPosition = window.innerHeight;
-    let socials = document.getElementById('socials') as HTMLElement;
+    let socials = document.getElementsByClassName('list_s')[0] as HTMLElement;
     if (introduce.getBoundingClientRect().top < screenPosition) {
-      socials.classList.add('show')
-      socials.classList.remove('hide')
+      socials.classList.add('show_s')
+      socials.classList.remove('hide_s')
 
     }
     if (introduce.getBoundingClientRect().top > screenPosition) {
-      socials.classList.add('hide')
-      socials.classList.remove('show')
+      socials.classList.add('hide_s')
+      socials.classList.remove('show_s')
 
     }
   }

@@ -5,6 +5,7 @@
 }
 .content {
   padding: 70px 0;
+  overflow: hidden;
   .title {
     display: flex;
     flex-direction: row;
@@ -25,14 +26,16 @@
     }
   }
 }
-.hide {
-  display: none;
+.hide_s {
+  opacity: 0;
   transition: all 0.3s;
+  animation: lineLeft 1.2s;
 }
 
-.show {
-  display: block;
+.show_s {
+  opacity: 1;
   transition: all 0.3s;
+  animation: lineLeft 1.2s;
 }
 
 .text {
