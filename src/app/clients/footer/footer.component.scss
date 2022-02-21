@@ -1,0 +1,25 @@
+.contact_footer {
+  background: #f7f7f7;
+  .contact {
+    img {
+      width: 100%;
+    }
+  }
+  .fl-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .footer_img {
+      width: 21%;
+      padding: 0px 28px;
+    }
+    h3 {
+      font-size: 25px;
+      font-weight: 400;
+    }
+    p {
+      font-size: 15px;
+      margin-bottom: 0px;
+    }
+  }
+}

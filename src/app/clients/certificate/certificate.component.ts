@@ -34,18 +34,6 @@ export class CertificateComponent implements OnInit {
       fe.style.animation = 'lineRight 1.4s';
       be.style.animation = 'lineLeft 1.4s';
     }
-    if (contentbe.getBoundingClientRect().top < screenPosition) {
-      for (let i = 0; i < 4; i++) {
-        if (i !== 2) {
-          (
-            document.getElementsByClassName('nav-link')[i] as HTMLElement
-          ).classList.remove('active');
-        } else {
-          (
-            document.getElementsByClassName('nav-link')[i] as HTMLElement
-          ).className = 'nav-link active';
-        }
-      }
-    }
+    
   }
 }

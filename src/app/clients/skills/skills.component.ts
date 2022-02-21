@@ -36,22 +36,10 @@ export class SkillsComponent implements OnInit {
 
       for (let i = 0; i < 4; i++) {
         let num = 0.8 * 1 + i * 0.2;
-        console.log(num);
         (
           document.getElementsByClassName('text_right')[i] as HTMLElement
         ).style.animation = 'lineRight ' + num + 's';
       }
-
-      for (let i = 0; i < 4; i++) {
-        if (i !== 1) {
-          (
-            document.getElementsByClassName('nav-link')[i] as HTMLElement
-          ).classList.remove('active');
-        }
-      }
-      (
-        document.getElementsByClassName('nav-link')[1] as HTMLElement
-      ).classList.add('active');
     }
   }
 }

@@ -51,16 +51,7 @@ export class AboutComponent implements OnInit, AfterContentInit {
       right.classList.add('right');
       left_absolute.classList.add('text');
 
-      for (let i = 0; i < 4; i++) {
-        (
-          document.getElementsByClassName('nav-link')[i] as HTMLElement
-        ).classList.remove('active');
-      }
-      (
-        document.getElementsByClassName('nav-link')[0] as HTMLElement
-      ).classList.add('active');
     }
-    
   }
   ngOnInit(): void {}
 }

@@ -26,17 +26,6 @@ export class ProductComponent implements OnInit {
       left.classList.add('left');
       right.classList.add('right');
       title.classList.add('text');
-
-      for (let i = 0; i < 4; i++) {
-        if (i !== 3) {
-          (
-            document.getElementsByClassName('nav-link')[i] as HTMLElement
-          ).classList.remove('active');
-        }
-      }
-      (
-        document.getElementsByClassName('nav-link')[3] as HTMLElement
-      ).classList.add('active');
     }
   }
 }
