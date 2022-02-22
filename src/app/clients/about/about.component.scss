@@ -154,3 +154,111 @@
     }
   }
 }
+
+@include responsive("large") {
+  .content {
+    padding-bottom: 70px;
+    .title {
+      padding-bottom: 30px;
+      h2 {
+        font-size: 25px;
+      }
+    }
+    .introduce {
+      font-size: 12px;
+      padding-bottom: 40px;
+    }
+    .info {
+      padding-bottom: 40px;
+      .img_content {
+        .img_absolute {
+          bottom: 0;
+        }
+      }
+      .personal_info {
+        font-size: 20px;
+        h3 {
+          font-size: 18px;
+        }
+        table {
+          th {
+            font-size: 14px;
+          }
+          td {
+            font-size: 14px;
+          }
+          td,
+          th {
+            padding-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .content {
+    padding-bottom: 50px;
+    .title {
+      padding-bottom: 20px;
+      h2 {
+        font-size: 21px;
+      }
+    }
+    .introduce {
+      font-size: 11px;
+      padding-bottom: 30px;
+    }
+    .info {
+      .img_content {
+        .img_absolute {
+          bottom: 15%;
+        }
+      }
+      .personal_info {
+        font-size: 18px;
+        h3 {
+          font-size: 15px;
+        }
+        table {
+          th {
+            font-size: 11px;
+          }
+          td {
+            font-size: 11px;
+          }
+          td,
+          th {
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive("small") {
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    .title {
+      padding-bottom: 20px;
+      h2 {
+        font-size: 21px;
+      }
+    }
+    .introduce {
+      font-size: 11px;
+      padding-bottom: 30px;
+    }
+    .info {
+      .img_content {
+        .img_absolute {
+          bottom: 30%;
+        }
+      }
+    }
+  }
+}
