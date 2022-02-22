@@ -111,6 +111,15 @@
   }
 }
 
+@include responsive("medium") {
+  .image_border{
+    padding: 3px;
+    &::before {
+      border: 2px solid #d67456;
+    }
+  }
+}
+
 @keyframes lineLeft {
   from {
     transform: translateX(-100%);
@@ -119,6 +128,17 @@
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes lineLeft_s {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
 

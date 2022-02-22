@@ -16,15 +16,18 @@ export class SocialsComponent implements OnInit {
     )[0] as HTMLElement;
     let screenPosition = window.innerHeight;
     let socials = document.getElementsByClassName('list_s')[0] as HTMLElement;
-    if (introduce.getBoundingClientRect().top < screenPosition) {
-      socials.classList.add('show_s')
-      socials.classList.remove('hide_s')
+    if (introduce.getBoundingClientRect().top < screenPosition && introduce.getBoundingClientRect().top >= 0) {
+      socials.style.opacity = '1'
+      socials.style.animation = 'lineRight 0.5s'
 
+    }else{
+      socials.style.opacity = '0'
+      socials.style.animation = 'lineLeft_s 0.5s'
     }
-    if (introduce.getBoundingClientRect().top > screenPosition) {
-      socials.classList.add('hide_s')
-      socials.classList.remove('show_s')
+    // if (introduce.getBoundingClientRect().top > screenPosition) {
+    //   socials.classList.add('hide_s')
+    //   socials.classList.remove('show_s')
 
-    }
+    // }
   }
 }

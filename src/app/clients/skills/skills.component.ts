@@ -19,6 +19,9 @@ export class SkillsComponent implements OnInit {
     let content2 = document.getElementsByClassName(
       'skills_list'
     )[0] as HTMLElement;
+    let content3 = document.getElementsByClassName(
+      'about_me'
+    )[0] as HTMLElement;
     let screenPosition = window.innerHeight;
     if (
       content.getBoundingClientRect().top < screenPosition &&
@@ -36,6 +39,7 @@ export class SkillsComponent implements OnInit {
       right.classList.add('right');
       title.classList.add('text');
       content2.classList.add('vertical');
+      // content3.classList.add('text');
       content1.style.opacity = '1';
       content1.style.animation = 'none';
 
@@ -66,6 +70,7 @@ export class SkillsComponent implements OnInit {
       right.classList.remove('right');
       title.classList.remove('text');
       content2.classList.remove('vertical');
+      // content3.classList.remove('text');
       content1.style.opacity = '0';
       content1.style.animation = 'fadeOut 1s';
 

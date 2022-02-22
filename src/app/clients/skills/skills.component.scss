@@ -73,9 +73,14 @@
 @include responsive("extra-large") {
   .content {
     .title {
+      // padding-bottom: 25px;
       h2 {
         font-size: 25px;
       }
+    }
+    .about_me {
+      padding-bottom: 25px;
+      font-size: 14px;
     }
     .skills_list {
       min-height: 300px;
@@ -109,12 +114,31 @@
         font-size: 21px;
       }
     }
+    .about_me {
+      padding-bottom: 25px;
+      font-size: 11px;
+    }
     .skills_list {
       .item {
         font-size: 11px;
       }
       .dot {
         left: 49.7%;
+      }
+    }
+  }
+}
+
+@include responsive("small") {
+  .content { 
+    .about_me {
+      padding-bottom: 25px;
+      font-size: 11px;
+    }
+    .skills_list {
+      
+      .dot {
+        left: 49.5%;
       }
     }
   }
