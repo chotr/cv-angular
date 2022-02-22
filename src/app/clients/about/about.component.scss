@@ -213,7 +213,22 @@
     .info {
       .img_content {
         .img_absolute {
-          bottom: 15%;
+          bottom: -15%;
+          width: 65%;
+          right: 0%;
+          .img {
+            position: relative;
+            &::before {
+              border: 2px solid #87a64b;
+            }
+          }
+        }
+        .img {
+          padding: 3px;
+          width: 65%;
+          &::before {
+            border: 2px solid #d67456;
+          }
         }
       }
       .personal_info {
@@ -256,9 +271,13 @@
     .info {
       .img_content {
         .img_absolute {
-          bottom: 30%;
+          bottom: 25%;
+        }
+        .img {
+          width: 65%;
         }
       }
+      
     }
   }
 }

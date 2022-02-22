@@ -1,3 +1,5 @@
+@import "../../../styles/Helper/mixin";
+@import "../../../styles/Helper/variables";
 .content {
   overflow: hidden;
   opacity: 0;
@@ -38,6 +40,51 @@
     }
     .be_c {
       background: 0 0;
+    }
+  }
+}
+@include responsive("extra-large") {
+  .content {
+    .title {
+      h2 {
+        font-size: 25px;
+      }
+    }
+    .certificate_list {
+      .img {
+        width: 60%;
+      }
+      .text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .content {
+    .title {
+      h2 {
+        font-size: 21px;
+      }
+    }
+    .certificate_list {
+      .text {
+        font-size: 11px;
+      }
+      .fe_c {
+        padding-bottom:10px;
+      }
+    }
+  }
+}
+
+@include responsive("small") {
+  .content {
+    .certificate_list {
+      .img {
+        width: 100%;
+      }
     }
   }
 }
